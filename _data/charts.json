@@ -9,7 +9,8 @@
             1874.03955078125,
             1836.3660888671875,
             1849.808349609375,
-            1881.0550537109375
+            1881.0550537109375,
+            1784.97705078125
         ],
         "directx11": [
             2111.99755859375,
@@ -20,7 +21,8 @@
             2130.589599609375,
             2140.152099609375,
             2119.2998046875,
-            2065.3310546875
+            2065.3310546875,
+            2082.18896484375
         ],
         "labels": [
             "8ed0334",
@@ -31,7 +33,8 @@
             "714848f",
             "e283144",
             "5e807b8",
-            "16507ce"
+            "16507ce",
+            "7f89ba9"
         ],
         "tooltips": [
             "2020-08-25T10:42:04Z",
@@ -42,7 +45,8 @@
             "Merge pull request #179 from TheoBerlin/Benchmark-Workflow\n\nBenchmark Workflow\n2020-08-27T19:42:23Z",
             "Update README.md\n2020-08-28T15:17:12Z",
             "Merge pull request #180 from TheoBerlin/Benchmark-Workflow\n\nRefactor all python scripts\n2020-08-28T16:05:55Z",
-            "Merge pull request #182 from TheoBerlin/Entity-Subscriber\n\nFix velocity systems out of order\n2020-08-31T10:03:50Z"
+            "Merge pull request #182 from TheoBerlin/Entity-Subscriber\n\nFix velocity systems out of order\n2020-08-31T10:03:50Z",
+            "Merge pull request #183 from TheoBerlin/Entity-Subscriber\n\nAdd regular jobs, rename ComponentPublisher\n2020-08-31T15:15:42Z"
         ]
     }
 }
