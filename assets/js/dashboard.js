@@ -9,12 +9,12 @@ window.onload = function() {
 
 function generateGraphs() {
     // @ts-ignore
-    let data = {{ site.data.charts | jsonify }};
-    let commits = data['commits']
+    const data = {{ site.data.charts | jsonify }};
+    const commits = data['commits']
 
-    let avgFPSData      = data['AverageFPS'];
-    let avgFPSTooltips  = createTooltips(avgFPSData['commitIDs'], commits);
-    var ctx = document.getElementById('avgFPSChart').getContext('2d');
+    const avgFPSData      = data['AverageFPS'];
+    const avgFPSTooltips  = createTooltips(avgFPSData['commitIDs'], commits);
+    let ctx = document.getElementById('avgFPSChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -67,8 +67,8 @@ function generateGraphs() {
         }
     });
 
-    let memUsageData        = data['PeakMemoryUsage'];
-    let memUsageTooltips    = createTooltips(memUsageData['commitIDs'], commits);
+    const memUsageData        = data['PeakMemoryUsage'];
+    const memUsageTooltips    = createTooltips(memUsageData['commitIDs'], commits);
     ctx = document.getElementById('peakMemUsg').getContext('2d');
     new Chart(ctx, {
         type: 'line',
@@ -127,9 +127,7 @@ function createTooltips(commitIDs, commitData) {
     let tooltips = [];
     for (commitID of commitIDs) {
         let commit = commitData[commitID];
-        console.log(Date.parse(commit['timestamp']));
         let localTimestamp = new Date(commit['timestamp']).toString();
-        console.log(localTimestamp);
 
         tooltips.push(`${commit['message']}\n${localTimestamp}`)
     }
