@@ -32,7 +32,7 @@
             "message": "Merge pull request #184 from TheoBerlin/Memory-Usage-Stats\n\nPrint peak memory usage in benchmark results",
             "timestamp": "2020-09-01T08:56:44"
         },
-        "dcb1946ab921023dba9af214fc72cfa40bacd9c4": {
+        "dcb1946": {
             "message": "Adjust data layout in charts.json",
             "timestamp": "2020-09-01T11:40:45Z"
         },
