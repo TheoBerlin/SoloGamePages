@@ -31,6 +31,10 @@
         "df4d01e": {
             "message": "Merge pull request #184 from TheoBerlin/Memory-Usage-Stats\n\nPrint peak memory usage in benchmark results",
             "timestamp": "2020-09-01T08:56:44"
+        },
+        "dcb1946ab921023dba9af214fc72cfa40bacd9c4": {
+            "message": "Adjust data layout in charts.json",
+            "timestamp": "2020-09-01T11:40:45Z"
         }
     },
     "AverageFPS": {
@@ -42,7 +46,8 @@
             1849.808349609375,
             1881.0550537109375,
             1784.97705078125,
-            1810.631103515625
+            1810.631103515625,
+            1742.368408203125
         ],
         "directx11": [
             2056.630859375,
@@ -52,7 +57,8 @@
             2119.2998046875,
             2065.3310546875,
             2082.18896484375,
-            2076.4580078125
+            2076.4580078125,
+            2024.8916015625
         ],
         "commitIDs": [
             "8ed0334",
@@ -62,18 +68,22 @@
             "5e807b8",
             "16507ce",
             "7f89ba9",
-            "df4d01e"
+            "df4d01e",
+            "dcb1946ab921023dba9af214fc72cfa40bacd9c4"
         ]
     },
     "PeakMemoryUsage": {
         "vulkan": [
-            134.79525756835938
+            134.79525756835938,
+            134.23411560058594
         ],
         "directx11": [
-            75.47698974609375
+            75.47698974609375,
+            75.5630111694336
         ],
         "commitIDs": [
-            "df4d01e"
+            "df4d01e",
+            "dcb1946ab921023dba9af214fc72cfa40bacd9c4"
         ]
     }
 }
