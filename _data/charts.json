@@ -1,9 +1,40 @@
 {
+    "commits": {
+        "8ed0334": {
+            "message": "Merge pull request #171 from TheoBerlin/engine_cfg\n\nRendering API configurable in file",
+            "timestamp": "2020-08-25T10:42:04Z"
+        },
+        "628334f": {
+            "message": "PAT as environment variable",
+            "timestamp": "2020-08-27T19:33:53Z"
+        },
+        "714848f": {
+            "message": "Merge pull request #179 from TheoBerlin/Benchmark-Workflow\n\nBenchmark Workflow",
+            "timestamp": "2020-08-27T19:42:23Z"
+        },
+        "e283144": {
+            "message": "Update README.md",
+            "timestamp": "2020-08-28T15:17:12Z"
+        },
+        "5e807b8": {
+            "message": "Merge pull request #180 from TheoBerlin/Benchmark-Workflow\n\nRefactor all python scripts",
+            "timestamp": "2020-08-28T16:05:55Z"
+        },
+        "16507ce": {
+            "message": "Merge pull request #182 from TheoBerlin/Entity-Subscriber\n\nFix velocity systems out of order",
+            "timestamp": "2020-08-31T10:03:50Z"
+        },
+        "7f89ba9": {
+            "message": "Merge pull request #183 from TheoBerlin/Entity-Subscriber\n\nAdd regular jobs, rename ComponentPublisher",
+            "timestamp": "2020-08-31T15:15:42Z"
+        },
+        "df4d01e": {
+            "message": "Merge pull request #184 from TheoBerlin/Memory-Usage-Stats\n\nPrint peak memory usage in benchmark results",
+            "timestamp": "2020-09-01T08:56:44"
+        }
+    },
     "AverageFPS": {
         "vulkan": [
-            1858.930419921875,
-            1821.8345947265625,
-            1859.5643310546875,
             1825.7412109375,
             1831.713623046875,
             1874.03955078125,
@@ -14,9 +45,6 @@
             1810.631103515625
         ],
         "directx11": [
-            2111.99755859375,
-            2107.00146484375,
-            2109.88720703125,
             2056.630859375,
             2095.714111328125,
             2130.589599609375,
@@ -26,10 +54,7 @@
             2082.18896484375,
             2076.4580078125
         ],
-        "labels": [
-            "8ed0334",
-            "8ed0334",
-            "8ed0334",
+        "commitIDs": [
             "8ed0334",
             "628334f",
             "714848f",
@@ -38,19 +63,6 @@
             "16507ce",
             "7f89ba9",
             "df4d01e"
-        ],
-        "tooltips": [
-            "2020-08-25T10:42:04Z",
-            "Merge pull request #171 from TheoBerlin/engine_cfg\n\nRendering API configurable in file\\n2020-08-25T10:42:04Z",
-            "Merge pull request #171 from TheoBerlin/engine_cfg\n\nRendering API configurable in file\n2020-08-25T10:42:04Z",
-            "Merge pull request #171 from TheoBerlin/engine_cfg\n\nRendering API configurable in file\n2020-08-25T10:42:04Z",
-            "PAT as environment variable\n2020-08-27T19:33:53Z",
-            "Merge pull request #179 from TheoBerlin/Benchmark-Workflow\n\nBenchmark Workflow\n2020-08-27T19:42:23Z",
-            "Update README.md\n2020-08-28T15:17:12Z",
-            "Merge pull request #180 from TheoBerlin/Benchmark-Workflow\n\nRefactor all python scripts\n2020-08-28T16:05:55Z",
-            "Merge pull request #182 from TheoBerlin/Entity-Subscriber\n\nFix velocity systems out of order\n2020-08-31T10:03:50Z",
-            "Merge pull request #183 from TheoBerlin/Entity-Subscriber\n\nAdd regular jobs, rename ComponentPublisher\n2020-08-31T15:15:42Z",
-            "Merge pull request #184 from TheoBerlin/Memory-Usage-Stats\n\nPrint peak memory usage in benchmark results\n2020-09-01T08:56:44Z"
         ]
     },
     "PeakMemoryUsage": {
@@ -60,11 +72,8 @@
         "directx11": [
             75.47698974609375
         ],
-        "labels": [
+        "commitIDs": [
             "df4d01e"
-        ],
-        "tooltips": [
-            "Merge pull request #184 from TheoBerlin/Memory-Usage-Stats\n\nPrint peak memory usage in benchmark results\n2020-09-01T08:56:44Z"
         ]
     }
 }

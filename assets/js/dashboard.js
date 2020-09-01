@@ -9,25 +9,27 @@ window.onload = function() {
 
 function generateGraphs() {
     // @ts-ignore
-    var data = {{ site.data.charts | jsonify }};
-    var chartData = data["AverageFPS"]
+    let data = {{ site.data.charts | jsonify }};
+    let commits = data['commits']
 
+    let avgFPSData      = data['AverageFPS'];
+    let avgFPSTooltips  = createTooltips(avgFPSData['commitIDs'], commits);
     var ctx = document.getElementById('avgFPSChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: chartData['labels'],
+            labels: avgFPSData['commitIDs'],
             datasets: [
                 {
-                    data: chartData['vulkan'],
+                    data: avgFPSData['vulkan'],
                     label: 'Vulkan',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1
                 },
                 {
-                    data: chartData["directx11"],
-                    label: "DirectX 11",
+                    data: avgFPSData['directx11'],
+                    label: 'DirectX 11',
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
@@ -58,30 +60,31 @@ function generateGraphs() {
                 mode: 'index',
                 callbacks: {
                     afterTitle: function(tooltipItem, _) {
-                        return chartData['tooltips'][tooltipItem[0].index];
+                        return avgFPSTooltips[tooltipItem[0].index];
                     }
                 }
             }
         }
     });
 
-    chartData = data["PeakMemoryUsage"]
+    let memUsageData        = data['PeakMemoryUsage'];
+    let memUsageTooltips    = createTooltips(memUsageData['commitIDs'], commits);
     ctx = document.getElementById('peakMemUsg').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: chartData['labels'],
+            labels: memUsageData['commitIDs'],
             datasets: [
                 {
-                    data: chartData['vulkan'],
+                    data: memUsageData['vulkan'],
                     label: 'Vulkan',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1
                 },
                 {
-                    data: chartData["directx11"],
-                    label: "DirectX 11",
+                    data: memUsageData['directx11'],
+                    label: 'DirectX 11',
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
@@ -112,7 +115,7 @@ function generateGraphs() {
                 mode: 'index',
                 callbacks: {
                     afterTitle: function(tooltipItem, _) {
-                        return chartData['tooltips'][tooltipItem[0].index];
+                        return memUsageTooltips[tooltipItem[0].index];
                     }
                 }
             }
@@ -120,13 +123,16 @@ function generateGraphs() {
     });
 }
 
-function loadFile(filePath) {
-    var result = null;
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", filePath, false);
-    xmlhttp.send();
-    if (xmlhttp.status==200) {
-      result = xmlhttp.responseText;
+function createTooltips(commitIDs, commitData) {
+    let tooltips = [];
+    for (commitID of commitIDs) {
+        let commit = commitData[commitID];
+        console.log(Date.parse(commit['timestamp']));
+        let localTimestamp = new Date(commit['timestamp']).toString();
+        console.log(localTimestamp);
+
+        tooltips.push(`${commit['message']}\n${localTimestamp}`)
     }
-    return result;
-  }
+
+    return tooltips;
+}
