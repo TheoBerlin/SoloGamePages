@@ -54,13 +54,16 @@ function generateMultiAPIGraph(ctx, title, chartData, commitsData) {
             scales: {
                 xAxes: [{
                     ticks: {
-                        autoSkip: false,
+                        autoSkip: true,
+                        fontColor: '#9a9a9a',
+                        fontSize: 13,
                         maxRotation: 77,
                         minRotation: 77
                     }
                 }],
                 yAxes: [{
                     ticks: {
+                        fontColor: '#9a9a9a',
                         beginAtZero: true
                     }
                 }]
