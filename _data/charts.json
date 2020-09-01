@@ -48,5 +48,11 @@
             "Merge pull request #182 from TheoBerlin/Entity-Subscriber\n\nFix velocity systems out of order\n2020-08-31T10:03:50Z",
             "Merge pull request #183 from TheoBerlin/Entity-Subscriber\n\nAdd regular jobs, rename ComponentPublisher\n2020-08-31T15:15:42Z"
         ]
+    },
+    "PeakMemoryUsage": {
+        "vulkan": [],
+        "directx11": [],
+        "labels": [],
+        "tooltips": []
     }
 }
