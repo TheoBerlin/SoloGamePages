@@ -39,6 +39,10 @@
         "38446d0": {
             "message": "Merge pull request #185 from TheoBerlin/change-charts-data-layout\nChange charts data layout",
             "timestamp": "2020-09-01T12:18:49Z"
+        },
+        "ff0b9a9": {
+            "message": "Merge pull request #186 from TheoBerlin/configurable-presentation-mode\nConfigurable swapchain presentation mode",
+            "timestamp": "2020-09-01T20:30:26Z"
         }
     },
     "AverageFPS": {
@@ -52,7 +56,8 @@
             1784.97705078125,
             1810.631103515625,
             1742.368408203125,
-            1785.9813232421875
+            1785.9813232421875,
+            1798.037109375
         ],
         "directx11": [
             2056.630859375,
@@ -64,7 +69,8 @@
             2082.18896484375,
             2076.4580078125,
             2024.8916015625,
-            2043.0546875
+            2043.0546875,
+            2062.156494140625
         ],
         "commitIDs": [
             "8ed0334",
@@ -76,24 +82,28 @@
             "7f89ba9",
             "df4d01e",
             "dcb1946",
-            "38446d0"
+            "38446d0",
+            "ff0b9a9"
         ]
     },
     "PeakMemoryUsage": {
         "vulkan": [
             134.79525756835938,
             134.23411560058594,
-            134.46348571777344
+            134.46348571777344,
+            134.57408142089844
         ],
         "directx11": [
             75.47698974609375,
             75.5630111694336,
-            75.56710052490234
+            75.56710052490234,
+            75.65721893310547
         ],
         "commitIDs": [
             "df4d01e",
             "dcb1946",
-            "38446d0"
+            "38446d0",
+            "ff0b9a9"
         ]
     }
 }
